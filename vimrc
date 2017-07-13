@@ -6,8 +6,14 @@
 " or something like
 "     vim -p $(find . -name *.pm)'
 " move between tabs with CRTL+Left/Right-Arrows
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+" sadly CTRL does not work in vmplayer
+"nnoremap <C-Left> :tabprevious<CR>
+"nnoremap <C-Right> :tabnext<CR>
+
+" backspace
+nnoremap <BS> :tabprevious<CR>
+" enter
+nnoremap <CR> :tabnext<CR>
 
 """"""""""""""
 " Navigation "
@@ -15,7 +21,7 @@ nnoremap <C-Right> :tabnext<CR>
 " map PageDown on Space
 nmap <Space> <PageDown>
 " map PageUp on Back
-nmap <BS> <PageUp>
+"nmap <BS> <PageUp>
 
 """"""""""""""
 " tabulators "
