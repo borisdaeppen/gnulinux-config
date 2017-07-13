@@ -5,6 +5,8 @@
 "     :tabe path'
 " or something like
 "     vim -p $(find . -name *.pm)'
+" or
+"     vim -p $(find . -type f)'
 " move between tabs with CRTL+Left/Right-Arrows
 " sadly CTRL does not work in vmplayer
 "nnoremap <C-Left> :tabprevious<CR>
