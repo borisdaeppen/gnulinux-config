@@ -32,3 +32,10 @@ set expandtab          " insert spaces instead of tabs
 set tabstop=4          " define a tab as four spaces long
 set shiftwidth=4       " set automatic indenting to four spaces
 
+""""""""""
+" coding "
+""""""""""
+set number
+set autoindent
+set smartindent
+set cindent
