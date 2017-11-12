@@ -39,3 +39,5 @@ set number
 set autoindent
 set smartindent
 set cindent
+highlight ColorColumn ctermbg=gray
+set colorcolumn=81     " draw a gray line on width 81
