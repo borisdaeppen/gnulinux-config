@@ -255,6 +255,9 @@ globalkeys = awful.util.table.join(
    awful.key({}, "XF86AudioPrev", function()
      awful.util.spawn("playerctl previous", false)
    end),
+   -- screen locker
+   -- sudo apt install suckless-tools
+   awful.key({ }, "F12", function () awful.util.spawn("slock") end),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
