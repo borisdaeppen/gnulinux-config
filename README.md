@@ -1,4 +1,5 @@
 change to where this repository is located
+
     cd $REPO
 
 then run the commands below to add the configuration to your system
@@ -10,4 +11,4 @@ then run the commands below to add the configuration to your system
     cd $HOME/.config/awesome; ln -s $PWD/awesome/rc.lua
 
 # bash
-    echo 'test -r $REPO/bash/bashrc && . $PWD/bash/bashrc' >> $HOME/.bashrc
+    echo 'test -r $PWD/bash/bashrc && . $PWD/bash/bashrc' >> $HOME/.bashrc
