@@ -1,34 +1,27 @@
 ##############
 # GIT BRANCH #
 ##############
-# https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt
-# show git branch, not yet working perfectly, but very portable
-# better would be, to insert branch before the dollar sign
-#parse_git_branch() {
-#    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-#}
 
 get_git_branch() {
-  # evaluate if whe are in git and at which branch
-  git=$(/usr/bin/git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
-  
-  
-  # if whe find a opening bracket, whe assume whe are in git
-  if [ -n "$git" ]
+  branch=$(/usr/bin/git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+
+  if [ -n "$branch" ]
   then
-    echo " [$git] "
+    echo "[$branch]"
   else
     echo ""
   fi
 }
 
-# remove the two last characters, guessing that they are '\$ '
+# remove the three last characters, guessing that they are '\$ '
 PS1=${PS1::-3}
-# overwrite standard prompt from current user
-export PS1="$PS1\$(get_git_branch)\$ "
+
+# overwrite standard prompt from current user, adding '\$ ' again
+export PS1="$PS1\[\e[33m\$(get_git_branch)\]\[\e[0m\]\$ " # yellow
+#export PS1="$PS1\$(get_git_branch)\$ "
 
 # approach below uses the internal __git_ps1 function
-#export PS1="$PS1\$(__git_ps1 '(%s)')\$ "
+#export PS1="$PS1\$(__git_ps1 '[%s]')\$ "
 
 #############
 # PERL BREW #
