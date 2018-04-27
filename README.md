@@ -1,8 +1,13 @@
+change to where this repository is located
+    cd $REPO
+
+then run the commands below to add the configuration to your system
+
 # vimrc
-cd $HOME; ln -s $REPO/vim/vimrc .vimrc
+    cd $HOME; ln -s $PWD/vim/vimrc .vimrc
 
 # awesome window manager
-cd $HOME/.config/awesome; ln -s $REPO/awesome/rc.lua
+    cd $HOME/.config/awesome; ln -s $PWD/awesome/rc.lua
 
 # bash
-echo 'test -r $REPO/bash/bashrc && . $REPO/bash/bashrc' >> $HOME/.bashrc
+    echo 'test -r $REPO/bash/bashrc && . $PWD/bash/bashrc' >> $HOME/.bashrc
